@@ -20,7 +20,7 @@ This project was completed as a Take Home Project for the Introduction to Data S
 
 📊 Dataset Description
 
-The dataset consists of 200 student records and the following variables:
+The dataset, provided by IIT Madras, consists of 200 student records and the following variables:
 
 Feature  Description 
 
