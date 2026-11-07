@@ -4,17 +4,19 @@ A Data Science Take-Home Project | IIT Madras CODE – School Connect
 
 📌 Project Overview
 
-This project explores student academic performance using data analysis and machine learning techniques. The objective is to identify patterns in academic performance, understand relationships between different learning-related factors, and examine how students can be grouped according to their academic risk levels.
+This project explores student academic performance and learning-related patterns using Exploratory Data Analysis (EDA), K-Means Clustering, and Decision Tree Classification.
 
-The project was completed as a Take Home Project for the **Introduction to Data Science and AI** course offered by the Centre for Outreach and Digital Education (CODE), Indian Institute of Technology Madras.
+Using a dataset of 200 student records, the project investigates relationships between academic performance, study habits, attendance, sleep duration, and internet usage. It also applies machine learning techniques to identify student groups and examine patterns associated with different academic risk categories.
+
+This project was completed as a Take Home Project for the Introduction to Data Science and AI course offered by the Centre for Outreach and Digital Education (CODE), Indian Institute of Technology Madras.
 
 🎯 Objectives
 
-- Analyse student academic performance using relevant academic and lifestyle-related variables.
-- Identify relationships between study habits, attendance, examination performance, and other factors.
-- Apply K-Means Clustering to discover patterns among student groups.
-- Develop a Decision Tree Classification model to analyse academic risk categories.
-- Evaluate model performance and interpret the findings.
+- Explore student academic and behavioural characteristics.
+- Identify relationships between learning habits and academic performance.
+- Apply K-Means Clustering to identify groups of students with similar characteristics.
+- Develop a Decision Tree Classification model to examine academic risk categories.
+- Evaluate model performance and interpret the resulting patterns.
 
 📊 Dataset Description
 
@@ -41,7 +43,7 @@ Academic risk categories:
 🛠️ Tools & Technologies
 
 Orange Data Mining: Data analysis, clustering, classification and model evaluation.
-Spreadsheet Software :Initial data inspection and validation.
+Spreadsheet Software: Initial data inspection and validation.
 Machine Learning: K-Means Clustering and Decision Tree Classification.
 
 🔍 Methodology
@@ -53,6 +55,12 @@ Initial data inspection was conducted to check for missing values, duplicate rec
 Descriptive statistics were calculated to understand the distribution of the dataset.
 
 A correlation analysis identified a positive relationship between weekly study hours and previous examination scores (correlation coefficient: 0.7283).
+ Key observations:
+
+- Weekly study hours and previous examination scores showed a strong positive correlation (Pearson correlation coefficient: 0.7283).
+- Students in the High-risk category had lower median attendance than those in the Low-risk category.
+- Median sleep duration was lower in the High-risk category than in the Low-risk category.
+- Internet usage was highest in the High-risk category and lowest in the Low-risk category.
 
 2. K-Means Clustering
 
@@ -86,19 +94,33 @@ F1-Score                          75.4%
 
 Assignment Score and Attendance Percentage were identified as important splitting features in the resulting decision tree.
 
+Confusion Matrix Findings:
+- High risk: 42 out of 50 correctly classified.
+- Low risk: 78 out of 80 correctly classified.
+- Medium risk: 34 out of 70 correctly classified.
+The model classified Low-risk students most effectively, while Medium-risk students were more difficult to distinguish.
+
+Important Decision Tree features:
+
+- AssignmentScore was selected as the root node, followed by AttendancePercentage.
+- The resulting tree used normalized thresholds of 0.58982 for AssignmentScore and 0.47333 for AttendancePercentage.
+- These thresholds represent normalized feature values rather than original marks or percentages.
+
 📈 Key Findings
 
-- Weekly study hours demonstrated a positive correlation with previous examination scores.
-- K-Means clustering revealed distinguishable patterns among the three academic risk categories.
-- Assignment performance and attendance were important features in the Decision Tree model.
-- The classification model achieved 77% accuracy, demonstrating its ability to identify academic risk patterns within this dataset.
-
-Limitations
-
+- Study habits and academic performance: Weekly study hours showed a positive association with previous examination scores.
+- Attendance and academic risk: Higher attendance was associated with lower academic risk in the dataset.
+- Lifestyle patterns: Sleep duration and internet usage differed across academic risk categories.
+- Unsupervised learning: K-Means identified three groups that aligned strongly with the original academic risk labels.
+- Classification: The Decision Tree achieved 77% accuracy, with AssignmentScore and AttendancePercentage forming its first two decision splits.
+- Model interpretability: Decision Tree rules provided an understandable way to examine how predictions were formed.
+  
+  Limitations
 - The dataset contains 200 student records and may not represent broader student populations.
-- Observed relationships do not necessarily establish causation.
-- Model performance may vary with different datasets and student populations.
-- The model is intended for educational analysis and exploration, not as a standalone system for making decisions about individual students.
+- The findings may not generalize to other student populations.
+- The models identify associations and patterns, not causal relationships.
+- The Decision Tree had difficulty distinguishing Medium-risk students.
+- Future work could investigate larger datasets, additional learning-related variables, alternative classification algorithms and systematic cluster evaluation using methods such as silhouette analysis.
 
 Project Documentation
 
@@ -109,12 +131,11 @@ The repository includes:
 - screenshots/ – Visualisations and results from Orange Data Mining.
 - data/ – Dataset, if permitted for public distribution.
 
-## 🎓 Acknowledgement
+🎓 Acknowledgement
 
 This project was completed as part of the "Introduction to Data Science and AI" course offered by IIT Madras CODE through the School Connect programme.
 
 I was awarded a Certificate of Appreciation by IIT Madras CODE in recognition of my work on this Take Home Project.
-
 
 
 Author: A. Anjana Sanjeshree
@@ -124,3 +145,5 @@ Institution: Indian Institute of Technology Madras – CODE (School Connect)
 Project Category: Data Science & Machine Learning
 
 Year: 2026
+
+This project is an educational exploration of data science and machine learning techniques using student academic performance data.
