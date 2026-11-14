@@ -44,7 +44,7 @@ Academic risk categories:
 
 Orange Data Mining: Data analysis, clustering, classification and model evaluation.
 Spreadsheet Software: Initial data inspection and validation.
-Machine Learning: K-Means Clustering and Decision Tree Classification.
+Machine Learning: K-Means Clustering and Decision Tree Classification. 
 
 🔍 Methodology
 
