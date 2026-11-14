@@ -86,11 +86,11 @@ Model evaluation was conducted using 10-fold stratified cross-validation.
 
 The model achieved:
 
-Evaluation Metric        |        Result
-Classification Accuracy           77.0% 
-Precision                         77.1% 
-Recall                            77.0% 
-F1-Score                          75.4% 
+Evaluation Metric         |        Result
+Classification Accuracy            77.0% 
+Precision                          77.1% 
+Recall                             77.0% 
+F1-Score                           75.4% 
 
 Assignment Score and Attendance Percentage were identified as important splitting features in the resulting decision tree.
 
